@@ -1,0 +1,33 @@
+{% extends 'lms/base.html' %}
+
+{% block title %}Manage Grades{% endblock %}
+
+{% block content %}
+<h2>Manage Grades</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<h3>Current Grades</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Grade</th>
+            <th>Remarks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for grade in grades %}
+        <tr>
+            <td>{{ grade.student.username }}</td>
+            <td>{{ grade.course.name }}</td>
+            <td>{{ grade.grade }}</td>
+            <td>{{ grade.remarks }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

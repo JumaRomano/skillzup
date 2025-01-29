@@ -1,0 +1,11 @@
+{% extends 'lms/base.html' %}
+
+{% block title %}Teacher Dashboard{% endblock %}
+
+{% block content %}
+<h2>Teacher Dashboard</h2>
+<ul>
+    <li><a href="{% url 'manage_grades' %}">Manage Student Grades</a></li>
+    <li><a href="{% url 'add_student' %}">Add New Student</a></li>
+</ul>
+{% endblock %}

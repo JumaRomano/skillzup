@@ -1,0 +1,14 @@
+{% extends 'lms/base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2>Admin Dashboard</h2>
+<nav>
+    <ul class="nav nav-pills">
+        <li><a href="{% url 'manage_grades' %}">Manage Grades</a></li>
+        <li><a href="{% url 'add_teacher' %}">Add Teacher</a></li>
+        <li><a href="{% url 'update_fees' %}">Update Fees</a></li>
+    </ul>
+</nav>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'lms/base.html' %}
+
+{% block title %}School Events{% endblock %}
+
+{% block content %}
+<h2>School Events</h2>
+<ul>
+    <li>Sports Day: March 15, 2025</li>
+    <li>Science Fair: April 10, 2025</li>
+    <li>Annual Day: June 20, 2025</li>
+</ul>
+
+<h2>School Magazine</h2>
+<p>Access our latest magazine <a href="{% static 'magazine.pdf' %}">here</a>.</p>
+{% endblock %}
